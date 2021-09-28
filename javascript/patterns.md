@@ -16,16 +16,13 @@ const memoise =
 ### Generic memoisation function
 
 ```js
-function memoize(fn) {
-  var cache = {};
-
-  return function (...args) {
-    if (cache[args]) {
-      return cache[args];
+const memoize =
+  (func, cache = {}) =>
+  (...args) => {
+    if (!cache[args]) {
+      cache[args] = func(...args);
     }
 
-    cache[args] = fn.apply(this, args);
     return cache[args];
   };
-}
 ```
