@@ -16,3 +16,11 @@
 #### ssl
 
 `$ yarn config set strict-ssl false`
+
+# npm
+
+## log in
+
+### verify if logged in
+
+- `$ npm whoami` - will return username if logged in, else will error
