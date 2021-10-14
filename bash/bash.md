@@ -47,3 +47,9 @@ world
 - `$ killall <process>`
 - eg `$ killall node`
   * note this is dangerous
+
+## Size of directory
+
+- `du -s -h .`
+- `-s` only shows total (otherwise shows all directories recursively)
+- `-h` show in MB (instead of bytes)
