@@ -7,10 +7,13 @@ const memoise =
   (func, cache = {}) =>
   (arg) => {
     if (!cache[arg]) {
-      cache[arg] = func(arg);
+      cache[arg] = func(arg)
     }
-    return cache[arg];
-  };
+    return cache[arg]
+  }
+
+// single-line version
+const memoise = (fn, cache = {}) => arg => arg in cache ? cache[arg] : cache[arg] = fn(n)
 ```
 
 ### Generic memoisation function
@@ -20,9 +23,9 @@ const memoize =
   (func, cache = {}) =>
   (...args) => {
     if (!cache[args]) {
-      cache[args] = func(...args);
+      cache[args] = func(...args)
     }
 
-    return cache[args];
-  };
+    return cache[args]
+  }
 ```
